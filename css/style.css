@@ -1,0 +1,56 @@
+:root {
+  --primary: #b6895b;
+  --bg: #010101;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  font-family: "poppins", sans-serif;
+  color: #fff;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #b6895b;
+}
+
+.text-item {
+  position: relative;
+  font-size: 40px;
+  font-weight: 600;
+}
+
+.fisrt-text {
+  color: #fff;
+}
+
+.second-text {
+  color: #010101;
+}
+
+.second-text::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: #b6895b;
+  height: 100%;
+  width: 100%;
+  animation: 4s steps(12) infinite Animation;
+  border-left: 2px solid #010101;
+}
+
+@keyframes Animation {
+  100% {
+    left: 0;
+  }
+  40%,
+  60% {
+    left: calc(100% + 4px);
+  }
+}
